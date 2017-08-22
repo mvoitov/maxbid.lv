@@ -66,7 +66,7 @@ class NewBidAction extends CAction
 
         if ($price < $calc_price) {
             RAjax::error(array(
-                'type' => 'COMMON_ERROR',
+                'type' => 'COMMON_ERROR', 
                 'message' => Yii::t('basic', 'Your bid ({bid}) should be more then current price + minimal step ({need_bid})',
                     [
                         '{bid}' => PriceHelper::formate(floatval($price)),
