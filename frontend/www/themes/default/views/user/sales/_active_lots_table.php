@@ -202,7 +202,7 @@ cs()->registerScript(
 ); 
 ?>
 
-<?  Yii::app()->clientScript->registerScript('active_lots_grid', '
+<?php  Yii::app()->clientScript->registerScript('active_lots_grid', '
     $(".yiiPager > li > a").on("click", function() {
         updateWindowUrl($(this).attr("href"));
     });

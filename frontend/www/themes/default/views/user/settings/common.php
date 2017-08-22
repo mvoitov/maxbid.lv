@@ -133,12 +133,12 @@ $form = $this->beginWidget(
         <div class="form-group">
             <label for="inputNick" class="col-sm-2 control-label"><?= Yii::t('basic', 'Display name') ?>:</label>
             <div class="col-sm-10 control-label">
-                <? if(!$model->nick) { ?>
+                <?php if(!$model->nick) { ?>
                 <?php echo $form->error($model, 'nick'); ?>
                 <?php echo $form->textField($model, 'nick', array('class' => 'form-control', 'style' => 'width:200px')); ?>
-                <? } else { ?>
+                <?php } else { ?>
                 <?= CHtml::encode($model->nick); ?>
-                <? } ?>
+                <?php } ?>
             </div>
         </div>
         <div class="form-group">

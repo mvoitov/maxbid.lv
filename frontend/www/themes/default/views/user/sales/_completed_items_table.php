@@ -204,7 +204,7 @@ $cs->registerScript(
 
     <h3><?= Yii::t('basic', 'Unsold')?> <?= UI::showQuantityTablHdr($count); ?></h3>
 
-<? Yii::app()->clientScript->registerScript('active_lots_grid', '
+<?php Yii::app()->clientScript->registerScript('active_lots_grid', '
     $(".yiiPager > li > a").on("click", function() {
         updateWindowUrl($(this).attr("href"));
     });

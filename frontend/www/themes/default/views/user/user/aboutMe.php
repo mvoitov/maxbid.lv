@@ -27,11 +27,11 @@
  */
 
 ?>
-<? $this->widget('frontend.widgets.user.UserPageLabel', [
+<?php $this->widget('frontend.widgets.user.UserPageLabel', [
     'user'       => $model,
 ]); ?>
 
-<? $this->widget('frontend.widgets.user.UserPageTabs', array(
+<?php $this->widget('frontend.widgets.user.UserPageTabs', array(
         'user' => $model,
 )); ?>
 

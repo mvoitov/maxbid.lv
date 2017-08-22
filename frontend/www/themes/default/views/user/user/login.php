@@ -61,7 +61,7 @@ $this->pageTitle = Yii::t('basic', 'Login');
             )
         );
         ?>
-        <? echo CHtml::hiddenField('returnUrl', Yii::app()->request->requestUri); ?>
+        <?php echo CHtml::hiddenField('returnUrl', Yii::app()->request->requestUri); ?>
         <div class="form-group">
             <?php echo $form->label($model, 'login', ['class'=> 'col-xs-4 control-label']); ?>
             <div class="col-xs-8">

@@ -57,7 +57,7 @@ Yii::app()->clientScript->registerScript(
         <b><?= Yii::t('basic', 'It\'s your item') ?></b><br/>
         <small><?= Yii::t('basic', 'In favorites') ?>: <?= $base['favorites_count']; ?> </small>
         <small><a href="/user/cabinet/viewed/type/0/id/<?= $base['auction_id']; ?>"><?= Yii::t('basic', 'Views') ?>
-                : <? echo $base['viewed']; ?></a></small>
+                : <?php echo $base['viewed']; ?></a></small>
     </div>
 </div>
 <div class="row padding15">

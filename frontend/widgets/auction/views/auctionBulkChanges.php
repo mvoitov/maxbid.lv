@@ -42,5 +42,5 @@ $options = [
 
 </div>
 
-<? echo CHtml::beginForm('/editor/massAutoRepub', 'POST', array('id' => 'autorepub_mass_form', 'style' => 'display: none;')); ?><? echo CHtml::endForm(); ?>
+<?php echo CHtml::beginForm('/editor/massAutoRepub', 'POST', array('id' => 'autorepub_mass_form', 'style' => 'display: none;')); ?><?php echo CHtml::endForm(); ?>
 

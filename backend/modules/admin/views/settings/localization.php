@@ -55,7 +55,7 @@ $this->header_info = array(
                 <div class="box-content">
                     <div class="padded">
 
-                        <? $this->widget('backend.modules.admin.widgets.menuSettingWidget'); ?>
+                        <?php $this->widget('backend.modules.admin.widgets.menuSettingWidget'); ?>
 
                         <?php foreach ($model as $field): ?>
                         <div class="control-group">

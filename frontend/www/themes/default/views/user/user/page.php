@@ -135,11 +135,11 @@ $issetLot = UserDataHelper::issetLot($this->user->user_id);
     </div>
     <div class="col-xs-9">
 
-        <? $this->widget('frontend.widgets.user.UserPageLabel', [
+        <?php $this->widget('frontend.widgets.user.UserPageLabel', [
             'user' => $ownerModel,
         ]); ?>
 
-        <? $this->widget('frontend.widgets.user.UserPageTabs', [
+        <?php $this->widget('frontend.widgets.user.UserPageTabs', [
             'user' => $ownerModel,
         ]); ?>
 

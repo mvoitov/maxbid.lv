@@ -183,7 +183,7 @@ if (!empty($sales)) {
                                     </div>
                                     <div class="col-xs-7">
                                         <input type="submit" name="submit"
-                                               onclick="<? echo Yii::app()->user->isGuest ? '' : $js_1; ?>"
+                                               onclick="<?php echo Yii::app()->user->isGuest ? '' : $js_1; ?>"
                                                class="bet_sub btn btn-primary but_lot"
                                                value="<?= Yii::t('basic', 'Place bid') ?>" <?= ($base['owner'] == Yii::app()->user->id OR $base['status'] != BaseAuction::ST_ACTIVE) ? 'disabled' : '' ?>/>
                                     </div>
@@ -209,7 +209,7 @@ if (!empty($sales)) {
                                     </div>
                                     <div class="col-xs-7">
                                         <input type="submit" name="name" class="btn btn-primary but_lot"
-                                               onclick="<? echo Yii::app()->user->isGuest ? '' : $js_2; ?>"
+                                               onclick="<?php echo Yii::app()->user->isGuest ? '' : $js_2; ?>"
                                                value="<?= Yii::t('basic', 'Buy Now') ?>" <?= ($base['owner'] == Yii::app()->user->id OR $base['status'] != BaseAuction::ST_ACTIVE) ? 'disabled' : '' ?>/>
                                     </div>
                                 </form>

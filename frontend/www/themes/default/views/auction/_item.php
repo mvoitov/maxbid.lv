@@ -56,9 +56,9 @@ $breadcrumbOptions = isset($breadcrumbOptions) ? $breadcrumbOptions : [];
         <div class="col15-xs-9 info_lot">
             <div class="div_bread_cat"><?= Item::getBreadcrumbs($data, ' / ', [], $breadcrumbOptions); ?></div>
             <?php echo Item::getName($data); ?>
-            <? if(!empty($city)): ?>
+            <?php if(!empty($city)): ?>
             <span class="span_town"><?php echo City::getCityPathString($city); ?></span>
-            <? endif; ?>
+            <?php endif; ?>
 
             <div class="row saller_end">
                 <div class="col-xs-6">

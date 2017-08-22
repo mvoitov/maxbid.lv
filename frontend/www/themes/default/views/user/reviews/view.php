@@ -32,11 +32,11 @@ $countReviews = UserDataHelper::getCountReviews($this->user->user_id);
 ?>
 <?php $issetLot = UserDataHelper::issetLot($this->user->user_id); ?>
 
-<? $this->widget('frontend.widgets.user.UserPageLabel', [
+<?php $this->widget('frontend.widgets.user.UserPageLabel', [
     'user'       => $this->user,
 ]); ?>
 
-<? $this->widget('frontend.widgets.user.UserPageTabs', array(
+<?php $this->widget('frontend.widgets.user.UserPageTabs', array(
         'user' => $this->user,
 )); ?>
 

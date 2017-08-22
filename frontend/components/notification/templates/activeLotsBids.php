@@ -29,14 +29,14 @@
 ?>
 Активные лоты. По вашему лоту <?= BaseAuction::staticGetLink($lot->name, $lot->auction_id); ?> появились новые ставки:<br>
 <ul>
-    <? foreach($bids as $bid): ?>
+    <?php foreach($bids as $bid): ?>
             <li>
-                <?
+                <?php
                     $user = User::model()->findByPk($bid->owner);
                     echo ($user ? $user->getLink().': ' : '').$bid->price;
                 ?>
             </li>
-    <? endforeach; ?>
+    <?php endforeach; ?>
 </ul>
 <br>
 

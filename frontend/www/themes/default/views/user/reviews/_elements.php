@@ -38,7 +38,7 @@
         <td><strong><?= Yii::t('basic', 'All reviews') ?>: <?= $count; ?></strong>
         </td>
         <td align="right">
-            <? $this->widget('CLinkPager', array(
+            <?php $this->widget('CLinkPager', array(
                 'pages' => $pages,
                 'header' => '',
                 'prevPageLabel' => '&laquo; ' . Yii::t('basic', 'Newer'),
@@ -107,7 +107,7 @@
         <td>
         </td>
         <td align="right">
-            <? $this->widget('CLinkPager', array(
+            <?php $this->widget('CLinkPager', array(
                 'pages' => $pages,
                 'header' => '',
                 'prevPageLabel' => '&laquo; ' . Yii::t('basic', 'Newer'),

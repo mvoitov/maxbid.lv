@@ -93,7 +93,7 @@ $webUser = Getter::webUser();
 </table>
 
 <div class="text-right">
-    <? $this->widget('CLinkPager', array(
+    <?php $this->widget('CLinkPager', array(
         'pages' => $pages,
         'maxButtonCount' => 5,
         'firstPageLabel' => Yii::t('basic', 'First page'),

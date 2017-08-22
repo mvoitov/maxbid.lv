@@ -380,6 +380,6 @@ $user = Getter::userModel();
     
 <div class="row">
     <div class="col-12-lg text-right small" style="padding-right:20px;">
-<?= Yii::t('basic', 'Views')?>: <? echo $base['viewed']; ?>
+<?= Yii::t('basic', 'Views')?>: <?php echo $base['viewed']; ?>
     </div>
 </div>

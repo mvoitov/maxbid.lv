@@ -76,7 +76,7 @@
         </div>
     <?php endif; ?>
 
-    <? if($model->id_country): ?>
+    <?php if($model->id_country): ?>
         <?php if($lock && $defaultLocation->id_region): ?>
             <?= CHtml::activeHiddenField($model,'id_region'); ?>
         <?php else: ?>
@@ -90,7 +90,7 @@
             </div>
         <?php endif; ?>
 
-        <? if($model->id_region): ?>
+        <?php if($model->id_region): ?>
             <?php if($lock && $defaultLocation->id_city): ?>
                 <?= CHtml::activeHiddenField($model,'id_city'); ?>
             <?php else: ?>
@@ -103,6 +103,6 @@
                     ); ?>
                 </div>
             <?php endif; ?>
-        <? endif; ?>
-    <? endif; ?>
+        <?php endif; ?>
+    <?php endif; ?>
 </div>
