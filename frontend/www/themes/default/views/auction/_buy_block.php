@@ -302,7 +302,7 @@ if (!empty($sales)) {
 
                     <?php else: ?>
                         <div style="color: red;">
-                            <?= Yii::t('basic', 'Your bid {bid} has been outbid', ['{n1}' => '<span id="min_stap">' . $ab->price . '</span>']) ?>
+                            <?= Yii::t('basic', 'Your bid {bid} has been outbid', ['{bid}' => '<span id="min_stap">' . $ab->price . '</span>']) ?>
                         </div>
                     <?php endif; ?>
 
