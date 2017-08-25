@@ -57,7 +57,7 @@ $form = $this->beginWidget(
     <div class="form-group form-inline">
         <?php echo $form->textField($filter, 'price_min', ['class' => 'form-control', 'style' => 'width:80px']); ?> -
         <?php echo $form->textField($filter, 'price_max', ['class' => 'form-control', 'style' => 'width:80px']); ?>
-        <input type="submit" value=">" class="btn btn-default" style="width: 30px;">
+        <input type="submit" value="&#x1F50D;" class="btn btn-default">
     </div>
 
 <?php if (empty($hideCitySelector)): ?>

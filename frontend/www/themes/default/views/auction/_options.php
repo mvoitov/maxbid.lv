@@ -121,7 +121,7 @@ foreach ($options as $option) {
         echo "<div class='form-group form-inline'>".
             CHtml::textField('Filter[option][1][' . $option['attribute_id'] . '][from]', $from, array('class' => 'form-control options_range', 'placeholder' => Yii::t('basic', 'From'), 'onkeyUp'=>'return type_text_range_check(this);')).' - '.
             CHtml::textField('Filter[option][1][' . $option['attribute_id'] . '][to]', $to, array('class' => 'form-control options_range', 'placeholder' => Yii::t('basic', 'To'), 'onkeyUp'=>'return type_text_range_check(this);')).
-            ' <input type="submit" value=">" class="btn btn-default">'.
+            ' <input type="submit" value="&#x1F50D;" class="btn btn-default">'.
             "</div>";
         echo "<br/>";
     }

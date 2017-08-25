@@ -107,7 +107,7 @@ function changeTransaction(e) {
             break;
 
         case "2":// from $1
-            $("#FormCreateLot_starting_price").css({"border":"none","font-weight":"bold","color":"#009900","background" : "none"}).val("'.PriceHelper::formate(1).'");
+            $("#FormCreateLot_starting_price").css({"border":"none","font-weight":"bold","color":"#009900","background" : "none"}).val("1");
             $("label[for=\"FormCreateLot_starting_price\"]").removeClass("required").find("span.required").remove();
             $("#FormCreateLot_starting_price").parent().show();
             break;
@@ -323,7 +323,7 @@ $seller = Yii::app()->user->getModel();
         <div class="col-xs-9 right_col" id="content-options-block">
             <?php if ($opt_post == 0): ?>
                 <div id="content-options">
-                    <?= Yii::t('basic', 'Please select the category') ?> ^
+                    <span class="label label-warning"><?= Yii::t('basic', 'Please select the category') ?> ↑</span>
                 </div>
             <?php elseif ($opt_post == 1): ?>
                 <div id="content-options" style="padding: 0px 5px; background-color: rgb(241, 241, 241);">

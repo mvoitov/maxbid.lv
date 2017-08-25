@@ -75,7 +75,7 @@ $this->widget('ex-bootstrap.widgets.ENotify', array(
             <?php $this->renderPartial('//layouts/sidebar'); ?>
 
             <div class="main-content">
-                <div class='notifications top-right'></div>
+                <div style="z-index: 999" class='notifications top-right'></div>
                 <?php $this->renderPartial('//layouts/header'); ?>
                 <?php echo $content; ?>
             </div>

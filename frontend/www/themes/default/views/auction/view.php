@@ -367,7 +367,7 @@ $user = Getter::userModel();
                       
                   </div>
                   <?php else: ?>
-                  <div class="alert alert-info"><a href="/login"><?= Yii::t('basic', 'Please, log in')?></a></div>
+                  <a class="label label-primary" href="/login"><?= Yii::t('basic', 'Please, log in')?></a>
                   <?php endif; ?>
               </div>
          <!-- Question -->

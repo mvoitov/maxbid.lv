@@ -26,7 +26,7 @@ var Creator = function(options) {
         },
         this.hideOptions = function() {
             content = $('#content-options');
-            content.empty().html(opts.select_cat_t + ' ↑');
+            content.empty().html('<span class="label label-warning">'+opts.select_cat_t + ' ↑</span>');
             $('#content-options').css({'background-color':'white', 'padding':'0px'});
         },
         this.downloadOptions = function(id) {
@@ -50,7 +50,7 @@ var Creator = function(options) {
                         $('#content-options-block').show();
                         $('#content-options').css({'background-color':'#f1f1f1', 'padding':'0 5px'});
                     } else {
-                        content.empty().html(opts.no_param).show();
+                        content.empty().html('<span class="label label-success">'+opts.no_param+'</span>').show();
                         $('#content-options-block').show();
                         $('#content-options').css({'background-color':'white', 'padding':'0px'});
                     }
