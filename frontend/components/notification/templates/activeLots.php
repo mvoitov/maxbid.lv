@@ -27,5 +27,5 @@
  */
 
 ?>
-По вашему лоту <?= $linkItem; ?> появилась новая ставка <?= $bidPrice; ?><br/>
-<?= CHtml::link('Перейти к моим лотам', Yii::app()->createAbsoluteUrl('/user/sales/activeItems')); ?>
+By your lot <?= $linkItem; ?> there was a new rate <?= $bidPrice; ?><br/>
+<?= CHtml::link('Go to my lots', Yii::app()->createAbsoluteUrl('/user/sales/activeItems')); ?>

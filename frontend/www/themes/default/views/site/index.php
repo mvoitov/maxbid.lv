@@ -57,58 +57,57 @@ $auctionRandom = Yii::app()->db
 
 
 <div class="row main_slider">
-    <div class="col-xs-9">
+<!--    <div class="col-xs-9">-->
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-
-                <div class="item active">
-                    <img src="/bootstrap/img/main_sl1.jpg">
-                    <div class="carousel-caption">
-                    </div>
-                </div><!-- End Item -->
-
-                <div class="item">
-                    <img src="/bootstrap/img/main_sl2.jpg">
-                    <div class="carousel-caption">
-                    </div>
-                </div><!-- End Item -->
-                <div class="item">
-                    <img src="/bootstrap/img/main_sl3.jpg">
-                    <div class="carousel-caption">
-                    </div>
-                </div><!-- End Item -->
-                <div class="item">
-                    <img src="/bootstrap/img/main_sl4.jpg">
-                    <div class="carousel-caption">
-                    </div>
-                </div><!-- End Item -->
-
-            </div><!-- End Carousel Inner -->
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div><!-- End Carousel -->
+<!--        <div id="myCarousel" class="carousel slide" data-ride="carousel">-->
+<!--            <!-- Indicators -->
+<!---->
+<!---->
+<!--            <!-- Wrapper for slides -->
+<!--            <div class="carousel-inner">-->
+<!---->
+<!--                <div class="item active">-->
+<!--                    <img src="/bootstrap/img/main_sl1.jpg">-->
+<!--                    <div class="carousel-caption">-->
+<!--                    </div>-->
+<!--                </div><!-- End Item -->
+<!---->
+<!--                <div class="item">-->
+<!--                    <img src="/bootstrap/img/main_sl2.jpg">-->
+<!--                    <div class="carousel-caption">-->
+<!--                    </div>-->
+<!--                </div><!-- End Item -->
+<!--                <div class="item">-->
+<!--                    <img src="/bootstrap/img/main_sl3.jpg">-->
+<!--                    <div class="carousel-caption">-->
+<!--                    </div>-->
+<!--                </div><!-- End Item -->
+<!--                <div class="item">-->
+<!--                    <img src="/bootstrap/img/main_sl4.jpg">-->
+<!--                    <div class="carousel-caption">-->
+<!--                    </div>-->
+<!--                </div><!-- End Item -->
+<!--            </div><!-- End Carousel Inner -->
+<!---->
+<!--            <!-- Controls -->
+<!--            <a class="left carousel-control" href="#myCarousel" data-slide="prev">-->
+<!--                <span class="glyphicon glyphicon-chevron-left"></span>-->
+<!--            </a>-->
+<!--            <a class="right carousel-control" href="#myCarousel" data-slide="next">-->
+<!--                <span class="glyphicon glyphicon-chevron-right"></span>-->
+<!--            </a>-->
+<!--        </div><!-- End Carousel -->
 
         <!--    <a data-target="#myCarousel" data-slide-to="0" class="active">First slide</a>
             <a data-target="#myCarousel" data-slide-to="1">Second slide</a>
             <a data-target="#myCarousel" data-slide-to="2">Third slide</a>
         -->
 
-    </div>
-    <div class="col-xs-3 right_block">
-        <a href="http://molotoksoftware.com"><img class="simple_img" src="/bootstrap/img/right_slide.png"></a></div>
-</div>
-<hr class="horizontal_line">
+<!--    </div>-->
+<!--    <div class="col-xs-3 right_block">-->
+<!--        <a href="http://molotoksoftware.com"><img class="simple_img" src="/bootstrap/img/right_slide.png"></a></div>-->
+<!--</div>-->
+<!--<hr class="horizontal_line">-->
 <div class="row main_h1">
     <div class="col-xs-12">
         <h1><?= Yii::t('basic', 'Recomended') ?>

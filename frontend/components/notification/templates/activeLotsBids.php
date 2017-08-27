@@ -27,7 +27,7 @@
  */
 
 ?>
-Активные лоты. По вашему лоту <?= BaseAuction::staticGetLink($lot->name, $lot->auction_id); ?> появились новые ставки:<br>
+Active lots. By your lot <?= BaseAuction::staticGetLink($lot->name, $lot->auction_id); ?> there were new rates:<br>
 <ul>
     <?php foreach($bids as $bid): ?>
             <li>
@@ -40,4 +40,4 @@
 </ul>
 <br>
 
-<?= CHtml::link('Перейти к моим лотам', Yii::app()->createAbsoluteUrl('/user/sales/activeItems')); ?>
+<?= CHtml::link('Go to my lots', Yii::app()->createAbsoluteUrl('/user/sales/activeItems')); ?>

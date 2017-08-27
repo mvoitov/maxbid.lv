@@ -95,8 +95,8 @@ return [
     'About us' => 'О нас',
     'Support' => 'Поддержка',
     'Please, log in' => 'Пожалуйста, авторизируйтесь',
-    'Please visit the website molotoksoftware.com' => 'Перейдите на сайт molotoksoftware.com для того чтобы ознакомиться подробнее с возможностями',
-    'Molotok Software (a php-script for online auctions) represents a solution for the arrangement of your own trading platform with multiple functions.' => 'Програмный продукт Molotok (php-скрипт интернет-аукциона), представляет собой решение для организации собственной торговой площадки с множеством различных функций. ',
+    'Copyright 2017, The maxbid (http://www.maxbid.lv)' => 'Copyright 2017, The maxbid (http://www.maxbid.lv)',
+    'All content on this web site, such as text, graphics, logos, button icons and images is the property of Justice Systems, Inc. or its content suppliers and protected by United States and international copyright laws. The selection, arrangement, and presentation of all materials on this web site (including information in the public domain), and the overall design of this web site is the exclusive property of Justice Systems, Inc. and protected by United States and international copyright laws. All software on this site is the property of Justice Systems, Inc. or its software suppliers and protected by United States and international copyright laws.' => 'Весь контент на этом веб-сайте, такой как текст, графика, логотипы, значки кнопок и изображения, является собственностью Justice Systems, Inc. или его поставщиков контента и защищен законами США об авторском праве США. Выбор, компоновка и представление всех материалов на этом веб-сайте (включая информацию в общественном достоянии) и общий дизайн этого веб-сайта являются исключительной собственностью Justice Systems, Inc. и защищены законодательством США об авторском праве США , Все программное обеспечение на этом сайте является собственностью Justice Systems, Inc. или ее поставщиков программного обеспечения и защищено законами США об авторском праве. ',
     
     // Create lot
     'Sell an item' => 'Продать лот',

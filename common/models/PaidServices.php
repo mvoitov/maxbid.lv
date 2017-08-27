@@ -182,14 +182,14 @@ class PaidServices extends CActiveRecord
         //проверить возможность оплаты
         if (floatval($pro['price']) > floatval($user->balance)) {
             $suma = $pro['price'] - $user->balance;
-            $message = 'На вашем счету недостаточно средств для покупки ПРО аккаунта. Пожалуйста пополните счет на сумму (' . floatval(
+            $message = 'There are not enough funds on your account to buy a PRO account. Please top up your account by (' . floatval(
                 $suma
-            ) . 'руб.)';
+            ) . 'EUR.)';
             throw new CException($message, 12);
         }
 
         //снимаем деньги со счета пользователя
-        $user->moneySub(floatval($pro['price']), 'Покупка ПРО аккаунта');
+        $user->moneySub(floatval($pro['price']), 'Purchase of PRO account');
         if ($user->save(false) == false) {
             throw new CException("Error User. \n " . CJSON::encode($user->getErrors()));
         }

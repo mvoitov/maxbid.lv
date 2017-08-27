@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  *
@@ -9,7 +9,7 @@
  */
 
 /**
- * 
+ *
  * This file is part of MolotokSoftware.
  *
  * MolotokSoftware is free software: you can redistribute it and/or modify
@@ -21,33 +21,32 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
-
  * You should have received a copy of the GNU General Public License
  * along with MolotokSoftware.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 ?>
-Проданные лоты. Торги по Вашему лоту <?= $linkItem; ?> завершены.<br/> 
-<br/> 
+    Sold lots. Bidding for your item <?= $linkItem; ?> completed.<br/>
+    <br/>
 <?php if ($lotModel->status == Auction::ST_COMPLETED_SALE): ?>
-    <strong>Последняя ставка: </strong> <?= $bidPrice; ?> руб.<br/>
-<?php elseif ($lotModel->status == Auction::ST_SOLD_BLITZ || $quantity>1): ?>
-    <strong>Куплен по блиц-цене:</strong> <?= $lotModel->price; ?> руб.<br/>
-    Количество: <?=$quantity; ?><br/>
-    Общая сумма: <?=$amount;?> руб.<br/>
+    <strong>Last bet: </strong> <?= $bidPrice; ?> EUR.<br/>
+<?php elseif ($lotModel->status == Auction::ST_SOLD_BLITZ || $quantity > 1): ?>
+    <strong>Bought at a blitz price:</strong> <?= $lotModel->price; ?> EUR.<br/>
+    Amount: <?= $quantity; ?><br/>
+    Total amount: <?= $amount; ?> EUR.<br/>
 <?php else: ?>
     <?php if (isset($lotModel->price)): ?>
-        <strong>Куплен по блиц-цене:</strong> <?= $lotModel->price; ?> руб.<br/>
+        <strong>Bought at a blitz price:</strong> <?= $lotModel->price; ?> EUR.<br/>
         <br/>
     <?php endif; ?>
 <?php endif; ?>
-<br/> 
-<strong>Контактные данные:</strong><br/> 
-Покупатель: <?= $buyerModel->getLink(); ?><br/>
+    <br/>
+    <strong>Contact details:</strong><br/>
+    Buyer: <?= $buyerModel->getLink(); ?><br/>
 <?php if (!empty($buyerModel->telephone)): ?>
-    Телефон: <?= $buyerModel->telephone; ?><br/>
+    Phone: <?= $buyerModel->telephone; ?><br/>
 <?php endif; ?>
-E-mail: <?= $buyerModel->email; ?><br/>
-Дополнительная контактная информация: <?= $buyerModel->add_contact_info; ?><br/>
+    E-mail: <?= $buyerModel->email; ?><br/>
+    Additional contact information: <?= $buyerModel->add_contact_info; ?><br/>
 <?php
-echo CHtml::link('Перейти к проданным лотам', Yii::app()->createAbsoluteUrl('/user/sales/soldItems'));
+echo CHtml::link('Go to sold lots', Yii::app()->createAbsoluteUrl('/user/sales/soldItems'));

@@ -41,13 +41,7 @@
     </div>
     <div class="row end">
         <div class="col-xs-12 text-center">
-            <?= Yii::t('basic', 'Molotok Software (a php-script for online auctions) represents a solution for the arrangement of your own trading platform with multiple functions.');?> <br><?= Yii::t('basic', 'Please visit the website molotoksoftware.com');?>
-        </div>
-    </div>
-    <div class="row end">
-        <div class="col-xs-12 text-center">
-            <a href="http://molotoksoftware.com">
-            Powered by molotoksoftware.com</a>
+            <p>&copy; 2017 MAXBID.LV ALL RIGHTS RESERVED</p>
         </div>
     </div>
 </div>
