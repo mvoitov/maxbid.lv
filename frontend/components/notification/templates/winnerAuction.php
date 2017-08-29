@@ -29,20 +29,20 @@
 
 ?>
 
-История покупок. Поздравляем. Вы стали победителем в торгах по лоту <?= $linkItem; ?>. Пожалуйста свяжитесь с продавцом и выкупите лот.<br/>
+    Purchase history. Congratulations. You won the auction by lot <?= $linkItem; ?>. Please contact the seller and redeem the lot.<br/>
 <?php if ($quantity>1): ?>
-    Стоимость: <?= $lotPrice; ?>. <br/>
-    Количество: <?=$quantity; ?><br/>
-    Общая сумма: <?=$amount;?><br/>
+    Cost: <?= $lotPrice; ?>. <br/>
+    Amount: <?=$quantity; ?><br/>
+    Total amount: <?=$amount;?><br/>
 <?php else: ?>
-    Стоимость: <?= $lotPrice; ?>. <br/>
+    Cost: <?= $lotPrice; ?>. <br/>
 <?php endif; ?>
 <br/>
-<strong>Контактные данные:</strong><br/>
-Продавец: <?= $sellerModel->getLink(); ?><br/>
+<strong>Contact details:</strong><br/>
+    Seller: <?= $sellerModel->getLink(); ?><br/>
 <?php if (!empty($sellerModel->telephone)): ?>
-    Телефон: <?=$sellerModel->telephone; ?><br/>
+    Phone: <?=$sellerModel->telephone; ?><br/>
 <?php endif; ?>
 E-mail: <?= $sellerModel->email; ?><br/>
-Дополнительная контактная информация: <?= $sellerModel->add_contact_info; ?><br/>
-<?php echo CHtml::link('Перейти к покупкам', Yii::app()->createAbsoluteUrl('/user/shopping/historyShopping'));
+    Additional contact information: <?= $sellerModel->add_contact_info; ?><br/>
+<?php echo CHtml::link('Go to shopping', Yii::app()->createAbsoluteUrl('/user/shopping/historyShopping'));

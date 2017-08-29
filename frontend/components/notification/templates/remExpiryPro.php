@@ -30,5 +30,5 @@
 ?>
 
 
-Действия ПРО-аккаунта завершится <?=$completionDate;?>. Продлить ПРО-аккаунт можно здесь
- <?php echo CHtml::link('Перейти к PRO', Yii::app()->createAbsoluteUrl('/user/pro/index')); ?>
+    The actions of the pro-account will end <?=$completionDate;?>. You can renew the PRO-account here
+ <?php echo CHtml::link('Go to PRO', Yii::app()->createAbsoluteUrl('/user/pro/index')); ?>

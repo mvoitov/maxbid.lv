@@ -28,6 +28,6 @@
 
 
 ?>
-<p>Пользователь <?=$authorModel->getLink()?> высказал мнение по лоту "<?=$lotModel->getLink(true)?>":</p>
+<p>User <?=$authorModel->getLink()?> expressed an opinion on the lot "<?=$lotModel->getLink(true)?>":</p>
 
 <p><?=$reviewText?></p>

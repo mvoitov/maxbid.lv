@@ -27,6 +27,6 @@
  */
 
 ?>
-Не выигранные. Торги по лоту <?=$linkItem; ?> завершены. Ваша ставка <?= $bidPrice; ?> не сыграла.
-<?=  CHtml::link('Перейти к ставкам', Yii::app()->createAbsoluteUrl('/user/shopping/notWonItems'));
+    Not won. Bidding by lot <?=$linkItem; ?> completed. Your bid <?= $bidPrice; ?> did not play.
+<?=  CHtml::link('Go to lots', Yii::app()->createAbsoluteUrl('/user/shopping/notWonItems'));
 

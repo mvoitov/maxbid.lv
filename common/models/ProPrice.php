@@ -127,15 +127,15 @@ class ProPrice extends CActiveRecord
     public static function getDurationList()
     {
         return array(
-            self::DURATION_1MONTH => '1 месяц',
-            self::DURATION_6MONTH => '6 месяцев',
-            self::DURATION_1YEAR => 'год'
+            self::DURATION_1MONTH => '1 month',
+            self::DURATION_6MONTH => '6 months',
+            self::DURATION_1YEAR => 'year'
         );
     }
 
     public function getPrice()
     {
-        return floatval($this->price) . ' руб.';
+        return floatval($this->price) . ' EUR.';
     }
 
     public function getDuration()

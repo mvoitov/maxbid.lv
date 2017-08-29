@@ -60,8 +60,7 @@ $webUser = Getter::webUser();
             <td>
                 <?= $item->text; ?>
                 <div style="position:relative">
-                    <a class="auction-link"
-                       href="<?= Yii::app()->createUrl('/auction/view', array('id' => $item->entity->auction_id)); ?>"><?= $item->entity->name; ?></a>
+                    
                 </div>
             </td>
             <td>

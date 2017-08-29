@@ -74,7 +74,7 @@
         </label>
     </div>
     <div class="form-group">
-        <textarea class="form-control" name="text" rows="3"></textarea>
+        <textarea class="form-control" name="text" rows="3" placeholder="Review text"></textarea>
     </div>
       <div class="form-group">
           <button id="btn-delete-fav" class="btn btn-info"><?= Yii::t('basic', 'Leave feedback')?></button>

@@ -27,5 +27,5 @@
  */
 
 ?>
-Активные ставки. Ваша ставка "<?= $bet; ?>" по лоту <?=$linkItem; ?> перебита, <a href="<?=$linkActiveRate; ?>">Перейти к ставкам</a>
+Active rates. Your bet "<?= $bet; ?>" by lot <?=$linkItem; ?> is interrupted, <a href="<?=$linkActiveRate; ?>">Go to bets</a>
 

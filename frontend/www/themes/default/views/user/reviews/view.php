@@ -33,7 +33,7 @@ $countReviews = UserDataHelper::getCountReviews($this->user->user_id);
 <?php $issetLot = UserDataHelper::issetLot($this->user->user_id); ?>
 
 <?php $this->widget('frontend.widgets.user.UserPageLabel', [
-    'user'       => $this->user,
+    'user' => $this->user,
 ]); ?>
 
 <?php $this->widget('frontend.widgets.user.UserPageTabs', array(
@@ -43,11 +43,11 @@ $countReviews = UserDataHelper::getCountReviews($this->user->user_id);
 <div style="background-color: white;padding-top:20px;">
     <div class="reviews_header">
         <div class="btn-group btn-group-sm">
-            <a type="button" class="btn btn-default <?=(!$role AND !$value)?'active':''?>" href="/user/reviews/view/login/<?=$this->user->login?>"><?= Yii::t('basic', 'All')?></a>
-            <a type="button" class="btn btn-default <?=$role == Reviews::ROLE_SELLER?'active':''?>" href="/user/reviews/view/login/<?=$this->user->login?>/role/1"><?= Yii::t('basic', 'From sellers')?> <span class="label label-default"><?=$countReviews['roleBuyer']?></span></a>
-            <a type="button" class="btn btn-default <?=$role == Reviews::ROLE_BUYER?'active':''?>" href="/user/reviews/view/login/<?=$this->user->login?>/role/2"><?= Yii::t('basic', 'From buyers')?> <span class="label label-default"><?=$countReviews['roleSaller']?></span></a>
-            <a type="button" class="btn btn-default <?=$value == Reviews::VALUE_POSITIVE?'active':''?>" href="/user/reviews/view/login/<?=$this->user->login?>/value/positive"><?= Yii::t('basic', 'Only positive')?></a>
-            <a type="button" class="btn btn-default <?=$value == Reviews::VALUE_NEGATIVE?'active':''?>" href="/user/reviews/view/login/<?=$this->user->login?>/value/negative"><?= Yii::t('basic', 'Only negative')?></a>
+            <a type="button" class="btn btn-default <?= (!$role AND !$value)?'active':''?>" href="/user/reviews/view/login/<?= $this->user->login?>"><?= Yii::t('basic', 'All')?></a>
+            <a type="button" class="btn btn-default <?= $role == Reviews::ROLE_SELLER?'active':''?>" href="/user/reviews/view/login/<?= $this->user->login?>/role/1"><?= Yii::t('basic', 'From sellers')?> <span class="label label-default"><?=$countReviews['roleBuyer']?></span></a>
+            <a type="button" class="btn btn-default <?= $role == Reviews::ROLE_BUYER?'active':''?>" href="/user/reviews/view/login/<?= $this->user->login?>/role/2"><?= Yii::t('basic', 'From buyers')?> <span class="label label-default"><?=$countReviews['roleSaller']?></span></a>
+            <a type="button" class="btn btn-default <?= $value == Reviews::VALUE_POSITIVE?'active':''?>" href="/user/reviews/view/login/<?= $this->user->login?>/value/positive"><?= Yii::t('basic', 'Only positive')?></a>
+            <a type="button" class="btn btn-default <?= $value == Reviews::VALUE_NEGATIVE?'active':''?>" href="/user/reviews/view/login/<?= $this->user->login?>/value/negative"><?= Yii::t('basic', 'Only negative')?></a>
         </div>
     </div>
     <div class="private_review_content">

@@ -29,7 +29,7 @@
 
 $auctionCounter = 1;
 ?>
-<p>Пользователь <?=$authorModel->getLink()?> высказал мнение по нескольким лотам:</p>
+<p>User <?=$authorModel->getLink()?> expressed an opinion on several lots:</p>
 
 <p>
     <?php foreach ($auctions as $eachAuction): ?>
@@ -37,4 +37,4 @@ $auctionCounter = 1;
     <?php endforeach; ?>
 </p>
 
-<p>Текст: <?=$reviewText?></p>
+<p>Text: <?=$reviewText?></p>

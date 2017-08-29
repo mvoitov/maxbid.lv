@@ -24,7 +24,6 @@
  * You should have received a copy of the GNU General Public License
  * along with MolotokSoftware.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 ?>
 
 <?php if (empty($items)): ?>
@@ -71,8 +70,7 @@
             <td>
                 <?= $item->text; ?>
                 <div>
-                    <a class="auction-link"
-                       href="<?= Yii::app()->createUrl('/auction/view', array('id' => $item->entity->auction_id)); ?>"><?= $item->entity->name; ?></a>
+
                 </div>
             </td>
             <td>

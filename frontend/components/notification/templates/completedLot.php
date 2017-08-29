@@ -27,5 +27,5 @@
  */
 ?>
 
-Завершенные лоты. Торги по Вашему лоту <?= $linkItem; ?> завершены. Вы можете выставить лот на повторные торги.<br/>
-<?= CHtml::link('Перейти к завершенным лотам', Yii::app()->createAbsoluteUrl('/user/sales/completedItems')); ?>
+    Completed lots. Bidding for your item <?= $linkItem; ?> completed. You can set the lot for repeated bids.<br/>
+<?= CHtml::link('Go to completed lots', Yii::app()->createAbsoluteUrl('/user/sales/completedItems')); ?>
