@@ -85,7 +85,7 @@
     <div class="top_menu">
         <div class="row">
             <div class="header_cat but"><a
-                        href="/auctions/transport-197"><?= Yii::t('basic', 'Automotive {span}& Industrial{span2}', ['{span}' => '<br /><span class="small_t">', '{span2}' => '</span>']) ?></a>
+                        href="/auctions/transport-197"><?= Yii::t('basic', 'Automobiles {span}& Industrial{span2}', ['{span}' => '<br /><span class="small_t">', '{span2}' => '</span>']) ?></a>
             </div>
             <div class="header_cat but"><a
                         href="/auctions/telefony-svyaz-i-navigaciya-1285"><?= Yii::t('basic', 'Digital {span}& Prime Music{span2}', ['{span}' => '<br /><span class="small_t">', '{span2}' => '</span>']) ?></a>
@@ -97,7 +97,7 @@
                         href="/auctions/kollekcionirovanie-970"><?= Yii::t('basic', 'Collectibles {span}& Art{span2}', ['{span}' => '<br /><span class="small_t">', '{span2}' => '</span>']) ?></a>
             </div>
             <div class="header_cat but"><a
-                        href="/auctions/antikvariat-971"><?= Yii::t('basic', 'Sports {span}& Outdoors{span2}', ['{span}' => '<br /><span class="small_t">', '{span2}' => '</span>']) ?></a>
+                        href="/auctions/antikvariat-971"><?= Yii::t('basic', 'Art {span}& Antiques{span2}', ['{span}' => '<br /><span class="small_t">', '{span2}' => '</span>']) ?></a>
             </div>
             <div class="header_cat but"><a
                         href="/auctions/detskiy-mir-648"><?= Yii::t('basic', 'Toys, Kids {span}& Baby{span2}', ['{span}' => '<br /><span class="small_t">', '{span2}' => '</span>']) ?></a>

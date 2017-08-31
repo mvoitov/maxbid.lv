@@ -202,15 +202,6 @@ class ReviewsController extends FrontController
 
     public function actionCreate()
     {
-        //TODO check role
-        print_r($_POST['sale']);
-        echo '<br>';
-        print_r($_POST['text']);
-        echo '<br>';
-        print_r($_POST['value']);
-        echo '<br>';
-        print_r($_POST['role']);
-//        return;
         if (($sales = $_POST['sale']) AND ($text = $_POST['text']) AND ($rating = $_POST['value']) AND ($role = $_POST['role'])) {
 
             if (count($sales) > 1) {
