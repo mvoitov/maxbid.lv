@@ -9,7 +9,7 @@
  */
 
 /**
- * 
+ *
  * This file is part of MolotokSoftware.
  *
  * MolotokSoftware is free software: you can redistribute it and/or modify
@@ -21,12 +21,9 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
-
  * You should have received a copy of the GNU General Public License
  * along with MolotokSoftware.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
 class Country extends CActiveRecord
 {
     public function tableName()
@@ -82,12 +79,15 @@ class Country extends CActiveRecord
     {
         $countries = Yii::app()->cache ? Yii::app()->cache->get('country') : false;
 
-        if ($countries === false)
-        {
+        if ($countries === false) {
             $countries = Country::model()->findAll();
-            if(Yii::app()->cache) {
+            if (Yii::app()->cache) {
                 Yii::app()->cache->set('country', $countries, Yii::app()->params['cache_duration']);
             }
+        }
+
+        for($i = 0;$i<sizeof($countries);$i++){
+            $countries[$i]['name'] = self::auto_translate($countries[$i]['name']);
         }
 
         return $countries;
@@ -96,6 +96,15 @@ class Country extends CActiveRecord
     public static function model($className = __CLASS__)
     {
         return parent::model($className);
+    }
+
+    public static function auto_translate($text)
+    {
+        $key = 'trnsl.1.1.20170901T085332Z.6c3b05e192d0d0a1.f0edb873c622a27173cf3effdb0bebb4c8113822';
+        $url = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=' . $key . '&text=' . urlencode($text) . '&lang=ru-en';
+        $data = file_get_contents($url);
+        $result = json_decode($data, true);
+        return $result['text'][0];
     }
 
     public static function getNameById($id)
@@ -107,6 +116,6 @@ class Country extends CActiveRecord
             ->from(self::model()->tableName())
             ->where('id_country = :id_country', [':id_country' => (int)$id])
             ->queryScalar();
-        return $cityName;
+        return self::auto_translate($cityName);
     }
 }
