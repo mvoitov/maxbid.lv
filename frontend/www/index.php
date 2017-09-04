@@ -41,16 +41,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="ru">
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-105780054-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+<!--    <script>-->
+<!--        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+<!--            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+<!--            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+<!--        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');-->
+<!---->
+<!--        ga('create', 'UA-105780054-1', 'auto');-->
+<!--        ga('send', 'pageview');-->
+<!---->
+<!--    </script>-->
 </head>
     <body>
 <?php
@@ -61,29 +61,6 @@ function auto_translate($text)
     $data = file_get_contents($url);
     $result = json_decode($data,true);
     return $result['text'][0];
-}
-function cleanString($text) {
-    $utf8 = array(
-        '/[áàâãªä]/u'   =>   'a',
-        '/[ÁÀÂÃÄ]/u'    =>   'A',
-        '/[ÍÌÎÏ]/u'     =>   'I',
-        '/[íìîï]/u'     =>   'i',
-        '/[éèêë]/u'     =>   'e',
-        '/[ÉÈÊË]/u'     =>   'E',
-        '/[óòôõºö]/u'   =>   'o',
-        '/[ÓÒÔÕÖ]/u'    =>   'O',
-        '/[úùûü]/u'     =>   'u',
-        '/[ÚÙÛÜ]/u'     =>   'U',
-        '/ç/'           =>   'c',
-        '/Ç/'           =>   'C',
-        '/ñ/'           =>   'n',
-        '/Ñ/'           =>   'N',
-        '/–/'           =>   '-', // UTF-8 hyphen to "normal" hyphen
-        '/[’‘‹›‚]/u'    =>   ' ', // Literally a single quote
-        '/[“”«»„]/u'    =>   ' ', // Double quote
-        '/ /'           =>   ' ', // nonbreaking space (equiv. to 0x160)
-    );
-    return quotemeta(preg_replace(array_keys($utf8), array_values($utf8), $text));
 }
 $servername = "localhost";
 $username = "root";
@@ -105,9 +82,8 @@ $array;
 $from = $_GET['from'];
 $to = $_GET['to'];
 echo $from." -> ".$to;
-$sql = "SELECT `id_city`,`name` FROM `city` LIMIT ".$from.",".$to.";";
+$sql = "SELECT `id_city`,`name` FROM `city` WHERE  `id_city` >".$from." AND `id_city` < ".$to.";";
 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
@@ -121,9 +97,9 @@ if ($result->num_rows > 0) {
 reset($array);
 $first_key = key($array);
 echo $first_key;
-for($i=$first_key;$i<sizeof($array);$i++){
+for($i=$first_key;$i<$first_key+sizeof($array);$i++){
     echo $array[$i]."<br>";
-    $sql = "UPDATE `city` SET `name`='".cleanString($array[$i])."' WHERE `id_city`=".$i.";";
+    $sql = "UPDATE `city` SET `name`='".$array[$i]."' WHERE `id_city`=".$i.";";
 
     if ($conn->query($sql) === TRUE) {
 //        echo "Record updated successfully";
