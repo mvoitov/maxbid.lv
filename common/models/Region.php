@@ -99,15 +99,6 @@ class Region extends CActiveRecord
         return parent::model($className);
     }
 
-    public static function auto_translate($text)
-    {
-        $key = 'trnsl.1.1.20170901T085332Z.6c3b05e192d0d0a1.f0edb873c622a27173cf3effdb0bebb4c8113822';
-        $url = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=' . $key . '&text=' . urlencode($text) . '&lang=ru-en';
-        $data = file_get_contents($url);
-        $result = json_decode($data, true);
-        return $result['text'][0];
-    }
-
     public static function getNameById($id)
     {
         $cityName = Yii::app()
@@ -117,6 +108,6 @@ class Region extends CActiveRecord
             ->from(self::model()->tableName())
             ->where('id_region = :id_region', [':id_region' => (int)$id])
             ->queryScalar();
-        return self::auto_translate($cityName);
+        return $cityName;
     }
 }
