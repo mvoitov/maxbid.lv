@@ -36,4 +36,3 @@ Initializer::create('./../', 'frontend', [
     'local',
 ])->run();
 ?>
-
