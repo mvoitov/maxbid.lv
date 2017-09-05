@@ -86,10 +86,6 @@ class Country extends CActiveRecord
             }
         }
 
-        for($i = 0;$i<sizeof($countries);$i++){
-            $countries[$i]['name'] = $countries[$i]['name'];
-        }
-
         return $countries;
     }
 
