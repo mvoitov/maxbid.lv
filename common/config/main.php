@@ -62,7 +62,7 @@ return [
     'params'         => [
         'php.defaultCharset'       => 'utf-8',
         'php.timezone'             => 'Europe/Riga',
-        'minStepRatePercentage'    => 5.0,
+        'minStepRatePercentage'    => 5.00,
         'maintenanceMode'          => false
 
     ],
